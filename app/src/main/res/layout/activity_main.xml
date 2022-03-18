@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_blue_light"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="200dp"
+            android:text="Fill in the following details"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/product_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:ems="15"
+            android:hint=" product Name"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/buying"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/product_name"
+            android:layout_centerHorizontal="true"
+            android:ems="15"
+            android:hint="Buying price"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/selling"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/buying"
+            android:layout_centerHorizontal="true"
+            android:ems="15"
+            android:hint="Selling price"
+            android:inputType="number" />
+        <RelativeLayout
+            android:id="@+id/btn_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/selling"
+            android:layout_below="@+id/selling">
+
+            <TextView
+                android:id="@+id/img_error"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+               android:layout_centerHorizontal="true"
+                android:layout_below="@+id/chooser" />
+
+            <ImageView
+                android:id="@+id/chooser"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                app:srcCompat="@android:drawable/ic_menu_gallery" />
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_all"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp">
+
+            <Button
+                android:id="@+id/add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add"
+                android:textSize="17sp" />
+
+            <Button
+                android:id="@+id/view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="80dp"
+                android:layout_toRightOf="@+id/add"
+                android:text="view"
+                android:textSize="17sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+</ScrollView>
